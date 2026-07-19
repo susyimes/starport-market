@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starport-market"
+version = "0.1.0"
+description = "A deterministic Pyxel market-management game for humans and agents."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyxel>=2.9,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+starport-market = "starport_market.ui:main"
+starport-agent = "starport_market.agent_cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["starport_market*"]
+
+[tool.setuptools.package-data]
+starport_market = ["data/*.json"]
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

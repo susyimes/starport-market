@@ -1,0 +1,563 @@
+{
+  "products": [
+    {
+      "id": "glow_noodles",
+      "name": "Glow Noodles",
+      "short_name": "NOODLES",
+      "description": "Biolume noodles. Cheap, beloved, spoils fast.",
+      "base_cost": 4,
+      "base_price": 8,
+      "base_demand": 10,
+      "shelf_life": 2,
+      "color": 10,
+      "tags": ["food", "glow", "cheap"]
+    },
+    {
+      "id": "plasma_fruit",
+      "name": "Plasma Fruit",
+      "short_name": "FRUIT",
+      "description": "Crackling starfruit. High margin, high risk.",
+      "base_cost": 7,
+      "base_price": 15,
+      "base_demand": 6,
+      "shelf_life": 3,
+      "color": 14,
+      "tags": ["food", "exotic", "bio"]
+    },
+    {
+      "id": "void_tea",
+      "name": "Void Tea",
+      "short_name": "TEA",
+      "description": "Calming brew sipped by night shift monks.",
+      "base_cost": 3,
+      "base_price": 6,
+      "base_demand": 8,
+      "shelf_life": 8,
+      "color": 2,
+      "tags": ["drink", "calm", "cheap"]
+    },
+    {
+      "id": "meteor_jerky",
+      "name": "Meteor Jerky",
+      "short_name": "JERKY",
+      "description": "Irradiated jerky. Never spoils, slow seller.",
+      "base_cost": 5,
+      "base_price": 9,
+      "base_demand": 5,
+      "shelf_life": null,
+      "color": 4,
+      "tags": ["food", "protein", "travel"]
+    },
+    {
+      "id": "holo_charm",
+      "name": "Holo Charm",
+      "short_name": "CHARM",
+      "description": "Pocket hologram trinket for homesick pilots.",
+      "base_cost": 12,
+      "base_price": 22,
+      "base_demand": 3,
+      "shelf_life": null,
+      "color": 12,
+      "tags": ["tech", "luxury", "gift"]
+    }
+  ],
+  "customer_groups": [
+    {
+      "id": "dock_workers",
+      "name": "Dock Workers",
+      "description": "Hungry haulers on shift break; count every credit.",
+      "preferred_tags": ["food", "cheap", "protein"],
+      "price_sensitivity": 1.6,
+      "loyalty_bias": -1
+    },
+    {
+      "id": "transit_pilots",
+      "name": "Transit Pilots",
+      "description": "Layover crews grabbing rations for long hauls.",
+      "preferred_tags": ["travel", "drink", "protein"],
+      "price_sensitivity": 1.2,
+      "loyalty_bias": 1
+    },
+    {
+      "id": "star_tourists",
+      "name": "Star Tourists",
+      "description": "Wide-eyed visitors hunting souvenirs and snacks.",
+      "preferred_tags": ["exotic", "gift", "glow"],
+      "price_sensitivity": 0.7,
+      "loyalty_bias": -1
+    },
+    {
+      "id": "night_monks",
+      "name": "Night Monks",
+      "description": "Quiet order keeping the docks ritually supplied.",
+      "preferred_tags": ["calm", "drink", "bio"],
+      "price_sensitivity": 1.0,
+      "loyalty_bias": 3
+    },
+    {
+      "id": "scrap_traders",
+      "name": "Scrap Traders",
+      "description": "Haggling brokers flipping salvaged station tech.",
+      "preferred_tags": ["tech", "travel", "cheap"],
+      "price_sensitivity": 1.4,
+      "loyalty_bias": 0
+    },
+    {
+      "id": "luxe_envoys",
+      "name": "Luxe Envoys",
+      "description": "Station elite buying gifts for orbit society.",
+      "preferred_tags": ["luxury", "gift", "exotic"],
+      "price_sensitivity": 0.5,
+      "loyalty_bias": 1
+    }
+  ],
+  "events": [
+    {
+      "id": "comet_tail_festival",
+      "name": "Comet Tail Fair",
+      "headline": "Comet tail paints the sky tonight",
+      "description": "Crowds gather for the show; glowing and exotic goods fly off shelves.",
+      "weight": 8,
+      "effects": {"demand_tags": {"glow": 1.6, "exotic": 1.4}}
+    },
+    {
+      "id": "dock_strike",
+      "name": "Dock Strike",
+      "headline": "Dockers walk out at shift change",
+      "description": "Half the docks idle; fewer buyers and pricier food shipments.",
+      "weight": 6,
+      "effects": {"demand_all": 0.75, "cost_tags": {"food": 1.3}}
+    },
+    {
+      "id": "pilgrim_convoy",
+      "name": "Pilgrim Convoy",
+      "headline": "Convoy of Night Monks docks at dawn",
+      "description": "The order buys calming drink in bulk and blesses honest stalls.",
+      "weight": 7,
+      "effects": {"demand_tags": {"calm": 1.8, "drink": 1.5}, "reputation_delta": 1}
+    },
+    {
+      "id": "plasma_storm",
+      "name": "Plasma Storm",
+      "headline": "Plasma storm grounds bio-cargo",
+      "description": "Fruit shipments fry in orbit; exotic supply tightens, prices jump.",
+      "weight": 6,
+      "effects": {"cost_tags": {"exotic": 1.5, "bio": 1.4}, "demand_tags": {"exotic": 1.2}}
+    },
+    {
+      "id": "customs_raid",
+      "name": "Customs Raid",
+      "headline": "Customs sweeps the night market",
+      "description": "Inspectors tax tech and luxury imports; unlicensed stalls lose face.",
+      "weight": 5,
+      "effects": {"cost_tags": {"tech": 1.6, "luxury": 1.4}, "reputation_delta": -1}
+    },
+    {
+      "id": "signal_boost",
+      "name": "Signal Boost",
+      "headline": "Famous drifter raves about the market",
+      "description": "A wandering influencer beams praise; gifts and glow trend hard.",
+      "weight": 5,
+      "effects": {"demand_tags": {"gift": 1.5, "glow": 1.3}, "reputation_delta": 2}
+    },
+    {
+      "id": "freezer_meltdown",
+      "name": "Freezer Meltdown",
+      "headline": "Cold grid flickers across the bazaar",
+      "description": "Storage bays lose chill; effective capacity drops, food costs rise.",
+      "weight": 5,
+      "effects": {"capacity_delta": -6, "cost_tags": {"food": 1.2}}
+    },
+    {
+      "id": "miners_payday",
+      "name": "Miners Payday",
+      "headline": "Asteroid crews cash out tonight",
+      "description": "Flush miners swarm the stalls; protein and everything sells fast.",
+      "weight": 7,
+      "effects": {"demand_all": 1.3, "demand_tags": {"protein": 1.6}}
+    },
+    {
+      "id": "health_inspection",
+      "name": "Health Inspection",
+      "headline": "Sanitation drones scan every stall",
+      "description": "Spoilage rumors spook buyers; food demand dips, reputation tested.",
+      "weight": 5,
+      "effects": {"demand_tags": {"food": 0.8}, "reputation_delta": -1}
+    },
+    {
+      "id": "tea_blight",
+      "name": "Tea Blight",
+      "headline": "Blight hits the void tea harvest",
+      "description": "Calm-drink supply shrivels; costs soar while thirsty monks wait.",
+      "weight": 5,
+      "effects": {"cost_tags": {"drink": 1.6, "calm": 1.5}, "demand_tags": {"drink": 1.2}}
+    },
+    {
+      "id": "spice_caravan",
+      "name": "Spice Caravan",
+      "headline": "Caravan unloads cheap star spices",
+      "description": "A roving caravan undercuts suppliers; exotic and food costs drop.",
+      "weight": 6,
+      "effects": {"cost_tags": {"exotic": 0.7, "food": 0.8}}
+    },
+    {
+      "id": "blackout_night",
+      "name": "Blackout Night",
+      "headline": "Grid fails; the market goes dark",
+      "description": "Dark aisles slow shopping, but anything glowing becomes a beacon.",
+      "weight": 5,
+      "effects": {"demand_all": 0.8, "demand_tags": {"glow": 1.8}}
+    },
+    {
+      "id": "tourist_peak",
+      "name": "Tourist Peak",
+      "headline": "Cruise liner dumps a thousand wallets",
+      "description": "Sightseers flood the lanes; gifts, luxury and general demand spike.",
+      "weight": 6,
+      "effects": {"demand_all": 1.2, "demand_tags": {"gift": 1.5, "luxury": 1.4}}
+    },
+    {
+      "id": "recycler_fair",
+      "name": "Recycler Fair",
+      "headline": "Salvage fair floods tech stalls",
+      "description": "Scrappers dump components; tech gets cheap and curiosity rises.",
+      "weight": 5,
+      "effects": {"cost_tags": {"tech": 0.7}, "demand_tags": {"tech": 1.3}}
+    },
+    {
+      "id": "ration_scare",
+      "name": "Ration Scare",
+      "headline": "Rumor of rationing sparks panic",
+      "description": "Hoarders hit the market; protein and travel food vanish fast.",
+      "weight": 4,
+      "effects": {"demand_tags": {"protein": 1.8, "travel": 1.5}, "cost_tags": {"food": 1.3}}
+    },
+    {
+      "id": "quiet_orbit",
+      "name": "Quiet Orbit",
+      "headline": "Traffic lull over the starport",
+      "description": "Few ships dock today; every stall feels the hush.",
+      "weight": 6,
+      "effects": {"demand_all": 0.75}
+    },
+    {
+      "id": "rival_stall",
+      "name": "Rival Stall",
+      "headline": "Flashy rival opens two lanes down",
+      "description": "A competitor undercuts prices and siphons the casual crowd.",
+      "weight": 5,
+      "effects": {"demand_all": 0.85, "reputation_delta": -1}
+    },
+    {
+      "id": "ember_festival",
+      "name": "Ember Festival",
+      "headline": "Season ends in a blaze of lanterns",
+      "description": "The finale crowd spends freely; every stall shares the glow.",
+      "weight": 4,
+      "effects": {"demand_all": 1.5, "reputation_delta": 1}
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "cold_rack",
+      "name": "Cold Rack",
+      "description": "Adds chilled shelf space for 8 more units.",
+      "track": "storage",
+      "max_level": 3,
+      "base_cost": 60,
+      "cost_growth": 1.5,
+      "effects": {"capacity_delta": 8}
+    },
+    {
+      "id": "stasis_crates",
+      "name": "Stasis Crates",
+      "description": "Time-slowed crates extend all shelf life by 1 day.",
+      "track": "storage",
+      "max_level": 2,
+      "base_cost": 90,
+      "cost_growth": 1.6,
+      "effects": {"shelf_life_bonus": 1}
+    },
+    {
+      "id": "pocket_warehouse",
+      "name": "Pocket Warehouse",
+      "description": "A leased subspace bay holds 20 extra units.",
+      "track": "storage",
+      "max_level": 1,
+      "base_cost": 150,
+      "cost_growth": 2.0,
+      "effects": {"capacity_delta": 20}
+    },
+    {
+      "id": "demand_oracle",
+      "name": "Demand Oracle",
+      "description": "Forecasts demand one extra day per level.",
+      "track": "insight",
+      "max_level": 3,
+      "base_cost": 50,
+      "cost_growth": 1.5,
+      "effects": {"forecast_days": 1}
+    },
+    {
+      "id": "event_wiretap",
+      "name": "Event Wiretap",
+      "description": "Leaked port chatter reveals events early.",
+      "track": "insight",
+      "max_level": 2,
+      "base_cost": 70,
+      "cost_growth": 1.6,
+      "effects": {"event_forecast": 1}
+    },
+    {
+      "id": "neon_signage",
+      "name": "Neon Signage",
+      "description": "Brighter signs lift reputation and demand.",
+      "track": "brand",
+      "max_level": 3,
+      "base_cost": 55,
+      "cost_growth": 1.5,
+      "effects": {"reputation_delta": 1, "demand_all": 1.05}
+    },
+    {
+      "id": "loyalist_cards",
+      "name": "Loyalist Cards",
+      "description": "Punch cards keep regulars coming back.",
+      "track": "brand",
+      "max_level": 2,
+      "base_cost": 65,
+      "cost_growth": 1.6,
+      "effects": {"loyalty_bonus": 1}
+    },
+    {
+      "id": "auto_stockbot",
+      "name": "Auto Stockbot",
+      "description": "Supplier bot cuts every unit cost by four percent.",
+      "track": "automation",
+      "max_level": 2,
+      "base_cost": 80,
+      "cost_growth": 1.6,
+      "effects": {"order_discount": 0.04}
+    },
+    {
+      "id": "drone_hawker",
+      "name": "Drone Hawker",
+      "description": "A tireless barker drone lifts all demand by 8%.",
+      "track": "automation",
+      "max_level": 1,
+      "base_cost": 120,
+      "cost_growth": 1.2,
+      "effects": {"demand_all": 1.08, "rent_discount": 1}
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "leaflet_drones",
+      "name": "Leaflet Drones",
+      "description": "Cheap drones scatter menu leaflets over the docks.",
+      "cost": 30,
+      "demand_bonus": 2,
+      "reputation_risk": 0,
+      "tag_bonus": {"food": 1}
+    },
+    {
+      "id": "holo_billboard",
+      "name": "Holo Billboard",
+      "description": "A shimmering ad tower above the bazaar entrance.",
+      "cost": 60,
+      "demand_bonus": 4,
+      "reputation_risk": 1,
+      "tag_bonus": {"glow": 2, "tech": 1}
+    },
+    {
+      "id": "tasting_night",
+      "name": "Tasting Night",
+      "description": "Free samples pull hungry crowds to your stall.",
+      "cost": 45,
+      "demand_bonus": 3,
+      "reputation_risk": 0,
+      "tag_bonus": {"food": 2, "drink": 2}
+    },
+    {
+      "id": "vip_gala",
+      "name": "VIP Gala",
+      "description": "Invite orbit elites; big spend, big snobbery risk.",
+      "cost": 90,
+      "demand_bonus": 5,
+      "reputation_risk": 2,
+      "tag_bonus": {"luxury": 3, "gift": 2}
+    },
+    {
+      "id": "sticker_bombing",
+      "name": "Sticker Bombing",
+      "description": "Guerrilla stickers on every airlock; some hate it.",
+      "cost": 20,
+      "demand_bonus": 3,
+      "reputation_risk": 2,
+      "tag_bonus": {"glow": 1}
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first_sale",
+      "name": "First Rush",
+      "description": "Sell 25 units across the neon counter.",
+      "metric": "total_units_sold",
+      "target": 25,
+      "cash_reward": 10,
+      "reputation_reward": 0
+    },
+    {
+      "id": "bulk_trader",
+      "name": "Bulk Trader",
+      "description": "Sell 200 units in a single 18-day run.",
+      "metric": "total_units_sold",
+      "target": 200,
+      "cash_reward": 60,
+      "reputation_reward": 2
+    },
+    {
+      "id": "big_earner",
+      "name": "Big Earner",
+      "description": "Earn 1500 in total sales revenue.",
+      "metric": "total_revenue",
+      "target": 1500,
+      "cash_reward": 70,
+      "reputation_reward": 2
+    },
+    {
+      "id": "cash_hoarder",
+      "name": "Cash Hoarder",
+      "description": "Hold 500 credits at the same time.",
+      "metric": "cash",
+      "target": 500,
+      "cash_reward": 50,
+      "reputation_reward": 1
+    },
+    {
+      "id": "star_reputation",
+      "name": "Star Reputation",
+      "description": "Raise reputation to 70 or more.",
+      "metric": "reputation",
+      "target": 70,
+      "cash_reward": 40,
+      "reputation_reward": 3
+    },
+    {
+      "id": "master_upgrader",
+      "name": "Master Upgrader",
+      "description": "Own six total upgrade levels at once.",
+      "metric": "upgrade_levels",
+      "target": 6,
+      "cash_reward": 60,
+      "reputation_reward": 2
+    },
+    {
+      "id": "flawless_host",
+      "name": "Flawless Host",
+      "description": "Fill at least 98% of demand on five days.",
+      "metric": "perfect_service_days",
+      "target": 5,
+      "cash_reward": 50,
+      "reputation_reward": 3
+    },
+    {
+      "id": "clean_keeper",
+      "name": "Clean Keeper",
+      "description": "Finish eight days without spoiled goods.",
+      "metric": "no_waste_days",
+      "target": 8,
+      "cash_reward": 40,
+      "reputation_reward": 2
+    },
+    {
+      "id": "ad_veteran",
+      "name": "Ad Veteran",
+      "description": "Run marketing campaigns on six days.",
+      "metric": "campaign_days",
+      "target": 6,
+      "cash_reward": 40,
+      "reputation_reward": 2
+    },
+    {
+      "id": "zero_waste_run",
+      "name": "Zero Waste Run",
+      "description": "Complete all 18 days with zero waste.",
+      "metric": "total_units_spoiled",
+      "target": 0,
+      "cash_reward": 80,
+      "reputation_reward": 4
+    }
+  ],
+  "flavor_lines": {
+    "sale_success": [
+      "Cha-ching echoes under the neon.",
+      "Another crate empties before dawn.",
+      "The till hums a happy little tune.",
+      "Credits land softer than stardust.",
+      "A customer leaves glowing, literally.",
+      "Sold out smiles all around.",
+      "The queue shuffles forward, pleased."
+    ],
+    "stockout": [
+      "Empty shelf, disappointed sighs.",
+      "The crowd thins; you ran dry.",
+      "Sorry, fresh batch lands tomorrow.",
+      "A dozen hands grasp at nothing.",
+      "Stockout. The neon feels colder.",
+      "You mouth an apology to the queue.",
+      "Bare racks stare back at you."
+    ],
+    "spoilage": [
+      "The glow fades to a sad gray mush.",
+      "Fruit weeps plasma onto the floor.",
+      "Yesterday's noodles join the void.",
+      "Spoiled stock feeds the incinerator.",
+      "A sour smell haunts aisle two.",
+      "Expired. The bin drones feast tonight.",
+      "Another crate clocks out, unbought."
+    ],
+    "upgrade": [
+      "New hardware hums to life.",
+      "Your stall just got a little smarter.",
+      "Tools of the trade, freshly sharpened.",
+      "The market notices your glow-up.",
+      "Investment today, dividends tomorrow.",
+      "Upgraded. The future feels closer.",
+      "Wiring singes; progress smells burnt."
+    ],
+    "game_over": [
+      "The stall lights dim one last time.",
+      "Eighteen days under the neon sky: done.",
+      "You close the shutters on the market.",
+      "The starport forgets, but you won't.",
+      "Final tally under a fading moon.",
+      "Your ledger closes; the crowd moves on.",
+      "Last call echoes down the dock."
+    ]
+  },
+  "balance_notes": [
+    "Start cash buys a shallow spread, never a full 24-unit hoard.",
+    "Noodles sell quickly but rot in two days, punishing overstock.",
+    "Fruit doubles money per unit yet spoils; stock it before events.",
+    "Jerky and charms never expire, so they park spare cash safely.",
+    "Event headlines hint at tag spikes; buy the matching tags early.",
+    "Negative events cut capacity or raise costs; keep a cash buffer.",
+    "Capacity upgrades pay off only if demand is forecast to rise.",
+    "Reputation from brand upgrades cushions inspection and rivals.",
+    "Late game shifts toward high-margin charms for the finale."
+  ],
+  "tutorial_tips": [
+    "Buy stock, set prices, then open the market.",
+    "Events change what customers want and suppliers charge.",
+    "Oldest stock sells first; watch every expiry date.",
+    "Raise prices on scarce goods to earn more per unit.",
+    "Cut prices before expiry to clear old stock fast.",
+    "High reputation attracts more demand tomorrow.",
+    "Campaigns boost traffic but can hurt reputation.",
+    "Cold storage protects risky perishable stock.",
+    "Do not over-order: spoiled goods burn cash and rep.",
+    "Keep a cash reserve for rent and supply shocks.",
+    "Match product tags to each arriving customer group.",
+    "Day 18 is the finale; turn inventory into credits."
+  ]
+}
