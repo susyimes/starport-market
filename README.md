@@ -4,6 +4,16 @@
 
 它同时也是一个 Agent 环境：人类界面和 JSON Agent 使用同一个确定性规则核心，不需要让 Agent 截图、识字或模拟按键。
 
+## 产品画面
+
+![Starport Market title](docs/screenshots/title.png)
+
+| 规划经营 | 夜间日报 | 最终评级 |
+| --- | --- | --- |
+| ![Planning dashboard](docs/screenshots/plan.png) | ![Nightly report](docs/screenshots/report.png) | ![Final score](docs/screenshots/game_over.png) |
+
+0.2 视觉系统采用原生 Pyxel 16 色绘制：自定义像素 Logo、五种商品精灵、M0X 商贩机器人、六类顾客剪影、动态摊位、分层经营卡片、颜色语义、两页图形化教程和八帧以内的界面转场。所有美术均由代码生成，不依赖外部资源包。
+
 ## 现在就玩
 
 ```powershell
@@ -28,6 +38,8 @@ Windows 下也可以直接双击 `run_game.bat`；首次运行会自动创建项
 | `U` | 切换永久升级 |
 | `Space` / `Enter` | 开市 / 进入下一天 |
 | `H` | 打开两页游戏内教程 |
+| `R` / `T` | 结算页：新 seed 重开 / 返回标题 |
+| `Esc` | 退出游戏 |
 
 ## 经营内容
 
@@ -91,7 +103,7 @@ Windows 下也可以直接双击 `run_game.bat`；首次运行会自动创建项
 .\.venv\Scripts\python.exe -m starport_market.agent_cli autoplay --seed 100 --episodes 50
 ```
 
-当前测试覆盖确定性、状态导出恢复、行动原子性、容量骤降、库存过期、同日扩容、JSON 序列化、JSONL 错误恢复和完整 Agent 对局。
+当前 20 项测试覆盖确定性、状态导出恢复、行动原子性、报价只读、容量骤降、FIFO 库存、保质期浪费、同日扩容、里程碑奖励、破产与终局、JSON 序列化、JSONL 错误恢复和完整 Agent 对局，以及 16 色调色板、商品与顾客精灵、Logo 字形和六种截图模式的视觉约束。
 
 ## 结构
 
@@ -102,8 +114,9 @@ starport_market/
   agent_cli.py     # JSONL / schema / autoplay
   bot.py           # 只读取公开 observation 的参考策略
   ui.py            # Pyxel 人类表现层
+  art.py           # 16 色设计系统、像素精灵与 UI 图元
   data/content.json
 tests/
 ```
 
-内容资源初稿由 Kimi K3 经 ACP 生成，规则架构、筛选、实现、平衡与验收由 Codex 完成。
+内容资源初稿和像素美术评审由 Kimi K3 经 ACP 生成；规则架构、设计筛选、实现、平衡与验收由 Codex 完成。生产视觉规范见 [docs/art-direction/STYLE_GUIDE.md](docs/art-direction/STYLE_GUIDE.md)。

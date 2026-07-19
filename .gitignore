@@ -7,5 +7,5 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-screenshots/
+/screenshots/
 .kimi-k3/
