@@ -1,0 +1,680 @@
+{
+  "ui": {
+    "app_title": "星港市集",
+    "app_title_line": "星港\n市集",
+    "dockline": "DOCKLINE  ·  7号泊位",
+    "tagline": "十八夜。一个摊位。没有重来。",
+    "open_stall": "开启摊位",
+    "open_market": "开市营业",
+    "continue": "继续",
+    "blocked": "无法执行",
+    "help_close": "关闭  (H)",
+    "field_guide": "现场手册",
+    "season_complete": "本季结束",
+    "final_ledger": "最终账本",
+    "new_seed": "R  新种子",
+    "to_title": "T  标题",
+    "night": "夜次",
+    "credits": "信用点",
+    "reputation": "声望",
+    "cargo": "货舱",
+    "cargo_manifest": "货舱清单",
+    "item": "货品",
+    "have": "库存",
+    "cost": "成本",
+    "load": "进货",
+    "ask": "标价",
+    "fcst": "预估需求",
+    "life": "保质",
+    "durable_chip": "耐储",
+    "tomorrow_up": "明晚↑",
+    "stock_limited": "受备货限制",
+    "sales": "营业额",
+    "sold": "售出",
+    "waste": "损耗",
+    "profit": "利润",
+    "night_closed": "收摊",
+    "plan": "计划",
+    "spend": "支出",
+    "safe": "余款",
+    "none_upgrade": "未选择升级 — 先攒钱",
+    "plan_blocked": "计划被拦截",
+    "tip": "提示",
+    "live_dock": "实况码头  ·  顾客进场",
+    "hint_title": "空格开摊  ·  H 帮助  ·  Esc 退出",
+    "hint_report": "空格 — 继续",
+    "hint_report_final": "查看最终成绩",
+    "hint_report_next": "规划下一夜",
+    "key_space": "空格",
+    "seed": "种子",
+    "per_product": "分货明细",
+    "supply": "进货",
+    "rent": "租金",
+    "rep": "声望",
+    "cash": "现金",
+    "score": "分数",
+    "cash_on_hand": "手头现金",
+    "lifetime_sales": "累计营业额",
+    "units_sold": "售出件数",
+    "stockouts": "缺货次数",
+    "stockout_tag": "缺货",
+    "spoiled": "损耗件数",
+    "upgrade_levels": "升级等级",
+    "milestones": "里程碑",
+    "space_debris": "太空垃圾",
+    "ach_unlock": "里程碑达成",
+    "est_rev": "预估营收",
+    "help_p1_title": "现场手册  ·  1 / 2",
+    "help_p2_title": "现场手册  ·  2 / 2",
+    "ready_log": "就绪。请看 Game 视图 · 空格开摊 · H 帮助",
+    "feat_nights": "18 夜",
+    "feat_products": "8 货品",
+    "chip_space": "空格 开摊",
+    "chip_help": "H 帮助",
+    "chip_esc": "Esc 退出",
+    "crowd_tonight": "今晚客群",
+    "key_select": "↑↓ 选货",
+    "key_load": "←→ 进货",
+    "key_price": "Z/X 标价",
+    "col_revenue": "营收",
+    "upgrade_off": "暂不升级",
+    "click_cycle": "点击切换",
+    "click_pick": "点击选择",
+    "help_pages": "←→ 翻页",
+    "help_close_chip": "H 关闭",
+    "profit_night": "本夜利润",
+    "cargo_full": "货舱已满 — 注意周转",
+    "stockout_short": "缺",
+    "sold_demand": "售出/需求",
+    "blurb_v3": "读懂风声，接契约，走灰道或正途。\n热度与债务都记在账上——扛过十八夜。",
+    "feat_contract": "契约看板",
+    "feat_smuggle": "走私热度",
+    "feat_route": "路线三岔",
+    "market_trend": "走势",
+    "mem_high": "抬价记仇",
+    "mem_low": "低价回头",
+    "rumor_tomorrow": "明晚风声",
+    "rumor_later": "后晚",
+    "rumor_certain": "确讯",
+    "risk_ledger": "风险台账",
+    "risk_chip": "R 台账",
+    "risk_metric": "热度·查验",
+    "close_chip": "R 关闭",
+    "tonight_inspection": "今晚查验率",
+    "cum_smuggled": "累计私货",
+    "heat_cap_label": "热度上限",
+    "debt_title": "债务",
+    "loan_per_night": "每夜还",
+    "nights_unit": "夜",
+    "times_unit": "次",
+    "units_unit": "件",
+    "no_debt": "无未偿债务",
+    "neg_streak": "资不抵债连续",
+    "neg_streak_warn": "连续 3 夜资不抵债即清算离港",
+    "assess_title": "考核目标",
+    "assess_net": "目标净值",
+    "now_net": "当前净值",
+    "heat_req": "热度须低于",
+    "assess_none": "本季考核已全部结束",
+    "finale_intel_title": "终夜情报",
+    "finale_hidden": "主题未知 — 夜十二起漏风",
+    "score_est": "终局分预估",
+    "net_worth": "净值",
+    "take_loan": "向半两借 $150",
+    "loan_planned": "已预约借款 $150",
+    "loan_na": "现金充足 · 钱庄未开门",
+    "loan_hint": "现金吃紧 — 按 L 向半两借款",
+    "best_case": "最好情形",
+    "worst_case": "最坏情形",
+    "wc_from_best": "起点·最好情形",
+    "wc_est_low": "预估取低",
+    "wc_due_rev": "契约尾款未计",
+    "wc_seize": "查验没收",
+    "wc_breach": "契约违约",
+    "contract_exposure": "契约敞口",
+    "insp_base": "基础热度",
+    "insp_extra": "本夜私货",
+    "insp_event": "事件系数",
+    "insp_event_short": "事件",
+    "insp_floor": "概率地板",
+    "insp_floor_short": "地板",
+    "insp_cap": "封顶",
+    "favor_armed": "已备人情",
+    "all_goods": "全场",
+    "stocked_label": "备货",
+    "expire_finale_chip": "终夜前过期",
+    "batches_label": "批次",
+    "deposit_row": "定金入账",
+    "contract_active": "在身契约",
+    "deadline": "交期",
+    "due_tonight": "今晚交货",
+    "nights_left": "剩",
+    "accepted_chip": "已接",
+    "penalty_short": "违约金",
+    "favor_title": "人情点",
+    "favor_spend": "花费",
+    "favor_none": "不动用",
+    "favor_waive": "免一次违约罚",
+    "favor_rent": "免今夜租金",
+    "favor_restock": "成本急补5件",
+    "favor_empty_sub": "暂无人情可用",
+    "upgrade_title": "升级",
+    "visitor_title": "黄昏访客",
+    "visitor_accept": "接受",
+    "visitor_decline": "婉拒",
+    "smuggle_price": "私价",
+    "heat_plus": "热度+",
+    "limit_label": "限量",
+    "route_title": "路线牌 · 不可逆",
+    "route_hint": "1/2 选择 · 再点取消",
+    "route_cancel": "再点取消",
+    "more_below": "更多",
+    "key_ledger": "R 台账",
+    "key_route": "1/2 路线",
+    "key_contract": "3-5 接单",
+    "key_visitor": "V 访客",
+    "key_upgrade": "B 升级",
+    "key_favor": "F 人情",
+    "key_loan": "L 借款",
+    "bill_title": "本夜账目",
+    "li_loan_in": "借款入账",
+    "li_deposit": "契约定金",
+    "li_supply": "官方进货",
+    "li_smuggle": "私货进货",
+    "li_upgrade": "升级支出",
+    "li_restock": "人情补货",
+    "li_visitor": "访客往来",
+    "li_seized": "查验罚没",
+    "li_contract": "契约收入",
+    "li_penalty": "违约罚金",
+    "li_sales": "散客收入",
+    "li_rent": "租金摊费",
+    "li_waste": "损耗费",
+    "li_loan_pay": "钱庄还款",
+    "li_interest": "利息",
+    "li_subsidy": "考核补贴",
+    "li_rep": "声望变化",
+    "rep_src_contract": "契约",
+    "rep_src_inspect": "查验",
+    "rep_src_vip": "贵客承诺",
+    "rep_src_checkpoint": "港务考核",
+    "rep_src_event": "事件",
+    "rep_src_service": "履约度",
+    "rep_src_stockout": "缺货",
+    "rep_src_spoil": "损耗",
+    "seized_units_label": "没收私货",
+    "fine_label": "罚款",
+    "sellout_chip": "售罄",
+    "nostock_chip": "未进货",
+    "contract_settle": "契约交割",
+    "bd_cash": "手头现金",
+    "bd_liq": "库存清算",
+    "bd_debt": "债务扣除",
+    "bd_rep": "声望加成",
+    "bd_fulfill": "契约履约",
+    "bd_breach": "契约违约",
+    "bd_ultimate": "终极大单",
+    "go_seizures": "查验记录",
+    "go_favor": "人情点",
+    "go_smuggled": "私货出手",
+    "go_total": "终局总分",
+    "help_v3_p1": "一夜流程\n\n1. 看板：今晚事件与客群 → 明晚风声（双候选押概率，旁边标着谁受益）→ 后晚迷雾。\n2. 契约决断（3-5 接单）：卡上先看罚则与备货缺口 — 接了就要交得出，交付优先于散客。\n3. 黄昏访客（V 接/拒）：具名来客，条件当面谈。\n4. 进货与走私：官方货看行情走势条；走私舱五五折上下，每件热度 +2。\n5. 定价（Z/X）：昨夜抬价，今夜客稀 — 回头客记得你的标价。\n6. 夜 1 / 7 / 13 路线牌（1/2）签了不回头；升级（B）· 人情（F）· 借款（L）。\n7. 计划面板过目「最好/最坏」与契约敞口，R 拉开风险台账 — 空格开市。\n\n← → 翻页",
+    "help_v3_p2": "风险明码标价\n\n• 查验率 = 热度 × 事件系数（海关严查 ×2 / 节庆 ×0.6），封顶 80%；地板 = 6% + 累计私货÷12 — 走私越多地板越高，没有免费私货。中招没收全部私货，罚款 $1×热度，声望 −5。\n• 契约违约：现货急单罚合同额 30%、声望 −4；跨夜大单退定金 ×1.5、声望 −8；终极大单赔定金 ×2 — 在身罚金总额就是计划面板的「契约敞口」。\n• 押风声囤货，先看保质期与货舱 — 夜十六起进价收口，夜十八批发市场关门，终夜只能卖囤下的货。\n• 人情点三种花法（F）：免一次违约罚 / 免今夜租金 / 成本价急补 5 件，上限 3 点。\n• 破产线：净值（现金 + 库存半价 − 未还本金）连续 3 夜为负即清算离港；负现金每夜滚 20% 利息 — 半两的钱庄（L）只开给缺钱的人。"
+  },
+  "products": {
+    "neon_skewer": {
+      "name": "霓虹烤串",
+      "short_name": "烤串",
+      "description": "荧光烤制的蛋白块。码头经典，坏得也快。"
+    },
+    "star_donut": {
+      "name": "星尘甜甜圈",
+      "short_name": "甜甜圈",
+      "description": "陨星糖霜。老少咸宜的甜味王牌。"
+    },
+    "ion_soda": {
+      "name": "离子汽水",
+      "short_name": "汽水",
+      "description": "噼啪作响的气泡。便宜解渴，走量之王。"
+    },
+    "void_jelly": {
+      "name": "虚空果冻",
+      "short_name": "果冻",
+      "description": "封着一颗星的果冻。异域珍品，脆弱易碎。"
+    },
+    "meteor_popcorn": {
+      "name": "陨石爆米花",
+      "short_name": "爆米花",
+      "description": "再入大气时爆开。干脆耐放，永不腐坏。"
+    },
+    "holo_sticker": {
+      "name": "全息贴纸",
+      "short_name": "贴纸",
+      "description": "口袋大小的全息图。飞行员贴满整个舱室。"
+    },
+    "orbit_plush": {
+      "name": "轨道玩偶",
+      "short_name": "玩偶",
+      "description": "带土星环的外星抱抱。高利润，小众买家。"
+    },
+    "quantum_coffee": {
+      "name": "量子咖啡",
+      "short_name": "咖啡",
+      "description": "两条时间线同时冲泡。提神的精品燃料。"
+    }
+  },
+  "customer_groups": {
+    "dock_workers": {
+      "name": "码头工人",
+      "leader": "码头工·铁砂",
+      "description": "换班休息的搬运工，每一分钱都算计。爱吃顶饱的烤串。",
+      "leader_line": "铁砂拍了拍围裙上的铁屑：「串儿烤老点，钱我数得清。」"
+    },
+    "transit_pilots": {
+      "name": "中转飞行员",
+      "leader": "飞行员·候鸟",
+      "description": "过路机组，抢补给准备长途。汽水和旅行干粮。",
+      "leader_line": "候鸟把头盔夹在腋下：「四小时后跳跃，能带走的都来点。」"
+    },
+    "star_tourists": {
+      "name": "星际游客",
+      "leader": "游客·小满",
+      "description": "四处张望的访客，见什么买什么。纪念品与可爱货。",
+      "leader_line": "小满举着相机原地转圈：「这个会发光！那个也会发光！」"
+    },
+    "night_monks": {
+      "name": "夜巡僧",
+      "leader": "夜巡僧·无灯",
+      "description": "安静的修会，为码头添置仪式物资。咖啡与生物货。",
+      "leader_line": "无灯合掌，声音比风轻：「灯该熄的熄，货该备的备。」"
+    },
+    "scrap_traders": {
+      "name": "废料商",
+      "leader": "废料商·斑鸠",
+      "description": "倒卖打捞技术的掮客，砍价成性。科技与便宜货。",
+      "leader_line": "斑鸠用磁铁敲了敲你的货架：「这价——再抹个零头？」"
+    },
+    "luxe_envoys": {
+      "name": "贵宾使团",
+      "leader": "豪客·九公主",
+      "description": "天鹅绒手套里的钱包从不问价。只要奢侈品。",
+      "leader_line": "九公主的手套停在玩偶上方半寸：「包起来。不必找零。」"
+    }
+  },
+  "events": {
+    "grand_departure": {
+      "name": "大离港",
+      "headline": "本季最后一支船队今夜离港 — 全场疯抢",
+      "description": "十八夜的终点。出港人潮把市集搬空，主题货翻着倍地走。"
+    },
+    "comet_tail_festival": {
+      "name": "彗尾集市",
+      "headline": "今夜彗尾点亮夜空，荧光货飞快脱销",
+      "description": "人群为观景与荧光小吃而来。巡逻队也去看彗星了。"
+    },
+    "engine_maintenance": {
+      "name": "引擎检修",
+      "headline": "船队停航过夜 — 旅行补给走俏",
+      "description": "机组为长途囤积补给。"
+    },
+    "pilgrim_convoy": {
+      "name": "朝圣船队",
+      "headline": "夜巡僧黎明靠港，宁神货品紧俏",
+      "description": "一支安静的船队来寻仪式物资。"
+    },
+    "scrap_auction": {
+      "name": "废料拍卖",
+      "headline": "打捞拍卖让科技货便宜到家",
+      "description": "今夜科技货进货白菜价。"
+    },
+    "gala_night": {
+      "name": "盛装晚宴",
+      "headline": "上层甲板使团舞会 — 奢侈品走俏",
+      "description": "天鹅绒手套，敞开的钱包。查验员也去赴宴了。"
+    },
+    "reactor_leak": {
+      "name": "反应堆泄漏",
+      "headline": "四层封锁；人流稀少，食品涨价",
+      "description": "紧张安静的夜，摊位空间受限。"
+    },
+    "sweet_comet": {
+      "name": "甜点彗星",
+      "headline": "糖尘彗尾掠过空间站 — 甜食党集合",
+      "description": "甜品走货快一倍。"
+    },
+    "dock_strike": {
+      "name": "码头罢工",
+      "headline": "搬运工停工；供应链吃紧",
+      "description": "万物涨价，顾客稀少。"
+    },
+    "zero_g_carnival": {
+      "name": "失重嘉年华",
+      "headline": "三号码头重力关闭 — 气泡与可爱横行",
+      "description": "嘉年华人群只要好玩，不要正餐。"
+    },
+    "customs_inspection": {
+      "name": "海关严查",
+      "headline": "查验员遍地 — 私货今夜别露头",
+      "description": "科技与奢侈品进货变贵，查验概率翻倍。"
+    },
+    "meteor_shower": {
+      "name": "流星雨",
+      "headline": "天幕上演大秀 — 今夜步行街爆满",
+      "description": "人人出门，样样好卖。"
+    },
+    "quiet_orbit": {
+      "name": "静谧轨道",
+      "headline": "寂静时辰；只有茶坊还亮着",
+      "description": "慢节奏的夜，适合宁神货品。"
+    }
+  },
+  "rumor_tags": {
+    "departure": "离港",
+    "glow": "闪",
+    "travel": "旅",
+    "calm": "静",
+    "tech": "科",
+    "luxury": "奢",
+    "official": "官方",
+    "sweet": "甜",
+    "fizzy": "泡",
+    "crowd": "人潮",
+    "premium": "精",
+    "cute": "萌",
+    "food": "食",
+    "drink": "饮",
+    "protein": "蛋白",
+    "cheap": "廉",
+    "exotic": "异",
+    "bio": "生",
+    "gift": "礼"
+  },
+  "upgrades": {
+    "cold_rack": {
+      "name": "冷藏架",
+      "description": "每级增加 8 单位冷藏货位。"
+    },
+    "intel_antenna": {
+      "name": "情报天线",
+      "description": "一级：明晚风声概率变准讯。二级：后晚也亮出双候选。"
+    },
+    "freshness_seal": {
+      "name": "保鲜封膜",
+      "description": "真空封装：易腐品多放一夜。"
+    },
+    "bargain_terminal": {
+      "name": "议价终端",
+      "description": "接入中介暗频：契约单价每级 +8%。"
+    }
+  },
+  "routes": {
+    "official_license": {
+      "name": "正规牌照",
+      "description": "港务盖章的白纸黑字。官方进货 −8%，考核通过额外补贴 +$20。",
+      "line": "窗口后的办事员头也不抬：「章给你盖了。别让我在缉私名单上看到你。」"
+    },
+    "gray_route": {
+      "name": "灰道人脉",
+      "description": "码头背面的暗号。走私舱多一条货线，私货价再 −5%。",
+      "line": "接头人把烟头按灭在栏杆上：「以后拿货走后巷。看见穿制服的，你不认识我。」"
+    },
+    "cold_pact": {
+      "name": "冷链协约",
+      "description": "站方冷库匀你一格。保质期 +1，损耗费减半。",
+      "line": "冷库管理员呵出白气：「半夜来取货别按错门铃，隔壁冻的是尸检样本。」"
+    },
+    "dock_broker": {
+      "name": "码头中介",
+      "description": "签进中介的花名册。契约价 +10%，每夜多一张契约卡。",
+      "line": "中介的算盘打得噼啪响：「单子我给你留最肥的，抽成嘛……都写在笑脸里了。」"
+    },
+    "vip_list": {
+      "name": "贵宾名录",
+      "description": "烫金名片入册。奢侈与精品需求 +25%。",
+      "line": "管家白手套递来一页名单：「上面的每个名字，都值一柜台玩偶。」"
+    },
+    "customs_insider": {
+      "name": "缉私内线",
+      "description": "查验队里有你的人。热度上限 50，查验概率 −40%。",
+      "line": "内线在货箱上敲了三下：「排查表我先看一步。你只管别把摊子堆成灯塔。」"
+    }
+  },
+  "contracts": {
+    "spot": {
+      "name": "现货急单",
+      "line": "货栈跑腿喘着气拍下单子：「今晚就要！点齐了钱当场结。」",
+      "fulfilled": "急单点货完毕，跑腿把钱袋整个拍在你手心。",
+      "breached": "急单交不齐 — 跑腿黑着脸撕了单子，罚金照合同扣。"
+    },
+    "bulk": {
+      "name": "跨夜大单",
+      "line": "船务代理推来一页货单：「定金三成先押你这。到日子货齐，尾款一分不少。」",
+      "fulfilled": "大单如期交割 — 代理在你的名字后面画了颗星。",
+      "breached": "违约了。定金加五成吐出去，码头的耳朵都听见了。"
+    },
+    "ultimate": {
+      "name": "终极大单",
+      "line": "离港船团的采买官亲自到场：「大离港夜，我全要主题货。定金四成，违约——你赔不起。」",
+      "fulfilled": "终夜大单交割完毕！船团鸣笛三声，为你的摊位。",
+      "breached": "终夜爽约。定金双倍赔出去，采买官的脸比真空还冷。"
+    },
+    "board_title": "契约看板",
+    "deposit": "定金",
+    "due": "交期",
+    "penalty": "违约金",
+    "accept": "接单",
+    "decline": "放弃"
+  },
+  "smuggle": {
+    "title": "走私舱",
+    "dealer": "船底仓的老鼠会计",
+    "line": "舱板下伸出一只手电筒：「五五折，不开票。每一件都烫手，你掂量。」",
+    "heat": "热度",
+    "inspection": "查验概率",
+    "seized": "私货被没收",
+    "seized_line": "查验灯白得刺眼。缉私队撬开夹层，热货一件不剩，罚单按热度开。",
+    "clean_pass": "巡逻灯扫过舱板，停了一秒 — 又移开了。"
+  },
+  "visitors": {
+    "sweeper": {
+      "name": "收尾贩子·老盖",
+      "title": "黄昏收尾贩",
+      "offer": "老盖用脚尖点了点快过期的货箱：「五五折，我全包圆。放到明早，它们只值垃圾处理费。」",
+      "accepted": "老盖麻利地清走临期货，钞票数得飞快：「痛快。明晚见。」",
+      "declined": "老盖耸耸肩把推车调头：「那就赌今晚卖得掉吧。」"
+    },
+    "informant": {
+      "name": "缉私线人·三只手",
+      "title": "缉私线人",
+      "offer": "三只手贴着摊沿低声道：「你摊子最近太亮了。给点辛苦费，我让排查表跳过你这行。」",
+      "accepted": "三只手把钱揣进第三只袖子：「今晚睡个安稳觉。」热度应声而落。",
+      "declined": "三只手啧了一声消失在灯影里：「省这点钱，回头别喊冤。」"
+    },
+    "broker": {
+      "name": "情报贩子·耳朵",
+      "title": "情报贩子",
+      "offer": "耳朵晃了晃一枚微型录音芯片：「明晚的风声，两个价钱里只有一个是真的。十八块，我卖你答案。」",
+      "accepted": "耳朵弹了下芯片：「拿好。这条消息比你今晚的利润值钱。」明晚风声已成确讯。",
+      "declined": "耳朵把芯片收回衣领：「行，那就继续猜谜。」"
+    },
+    "vip": {
+      "name": "豪客·九公主",
+      "title": "黄昏豪客",
+      "offer": "九公主的座驾无声停在摊前：「好东西我双倍收。条件——明晚给我留三件同款，别让我白跑。」",
+      "accepted": "九公主的侍从抱走货品，双倍货款入账。明晚的三件，她记着，你最好也记着。",
+      "declined": "车窗升起前她留下半句：「品味不错，胆子太小。」",
+      "kept": "九公主如约而至，取走留货：「守信的摊主，名录上该有个位置。」",
+      "broken": "留货没凑齐。九公主的车没有停 — 码头都看见了。"
+    },
+    "cameo": {
+      "name": "串场客·口琴匠",
+      "title": "串场客",
+      "offer": "一个背口琴的修船匠蹲在摊边：「吹一段换口热乎的？多的算你人情。」",
+      "accepted": "口琴声混着蒸汽飘过泊位，他多留了几个硬币在案板上。",
+      "declined": "口琴匠笑笑走了，琴声在下一个摊位响起。"
+    }
+  },
+  "moneylender": {
+    "name": "钱庄老板娘·半两",
+    "title": "半两钱庄",
+    "offer": "半两拨开算珠，眼皮不抬：「一百五拿去周转。往后八夜，每夜二十五，一夜都别少。」",
+    "loan_taken": "半两把票子推过柜台：「钱庄不催账 — 码头会替我催。」",
+    "payment_line": "半两的伙计准点立在摊前，收走今夜的二十五。",
+    "paid_off": "最后一笔还清。半两难得抬了下眼皮：「下次周转，利息给你抹个零。」",
+    "interest_line": "账面见红，利钱像藤壶一样往船底长。"
+  },
+  "checkpoints": {
+    "cp1": {
+      "name": "港务考核①",
+      "announce": "港务处公告：第六夜查账。净值过 $260，补贴照发；不过，租金上浮。",
+      "passed": "考核①通过。港务官在册子上勾了一笔：「摊子立住了。补贴领走。」",
+      "failed": "考核①未过。港务官敲了敲公示板：「租金上调，直到你证明自己。」"
+    },
+    "cp2": {
+      "name": "港务考核②",
+      "announce": "港务处公告：第十二夜复核。净值 $700 且摊面干净者，终夜摊位费减半。",
+      "passed": "考核②通过。港务官难得点头：「终夜摊位费减半，货位加两格。好好干。」",
+      "failed": "考核②未过。公示板上你的摊号被圈了红圈：终夜摊位费上浮五成。"
+    }
+  },
+  "finale": {
+    "title": "大离港夜",
+    "domain_hint": "码头电报：终夜主题初见端倪 — 二选一的方向。",
+    "tag_hint": "船团清单流出：终夜主题已收敛。备货要趁批发市场还开着。",
+    "confirm_hint": "主题确认。明夜大离港 — 全仓押注的时候到了。",
+    "closed": "批发市场卷闸落下 — 终夜只能卖囤下的货。",
+    "squeeze": "离港前的供应收口：进价一夜比一夜狠。"
+  },
+  "favor": {
+    "name": "人情点",
+    "contract_waive": "动用人情：这单违约，罚则一笔勾销。",
+    "rent_free": "动用人情：今夜租金，有人替你打了招呼。",
+    "restock": "动用人情：后半夜一辆无牌小车送来五件成本价的货。",
+    "gained": "码头记下了你这份人情。",
+    "empty": "人情点用完了 — 码头的账，欠一次少一次。"
+  },
+  "endings": {
+    "completed": {
+      "name": "十八夜落幕",
+      "line": "最后一班船的尾焰划过舷窗。你收起摊子，账本合上的声音很轻。"
+    },
+    "liquidated": {
+      "name": "清算离港",
+      "line": "连着三夜资不抵债。清算员贴上封条，你的摊位并进了下一场拍卖。码头不送人，只记账。"
+    }
+  },
+  "achievements": {
+    "first_contract": {
+      "name": "首单落笔",
+      "description": "履约第一张契约。"
+    },
+    "contract_pro": {
+      "name": "契约老手",
+      "description": "一季履约 6 张契约。"
+    },
+    "hundred_sold": {
+      "name": "百件俱乐部",
+      "description": "一季售出 100 件。"
+    },
+    "two_k_revenue": {
+      "name": "两千进账",
+      "description": "累计营业额达 2000。"
+    },
+    "cash_300": {
+      "name": "腰包鼓鼓",
+      "description": "一次持有 300 信用点。"
+    },
+    "rep_80": {
+      "name": "人见人爱",
+      "description": "声望达到 80。"
+    },
+    "tinkerer": {
+      "name": "改装爱好者",
+      "description": "累计 4 级升级。"
+    },
+    "perfect_5": {
+      "name": "完美五夜",
+      "description": "五晚满足率 98% 以上。"
+    },
+    "no_waste_10": {
+      "name": "光盘行动",
+      "description": "十晚零损耗。"
+    },
+    "night_runner": {
+      "name": "夜航人",
+      "description": "一季出手 40 件私货。"
+    },
+    "zero_waste_run": {
+      "name": "零废一季",
+      "description": "整季没有任何腐坏。"
+    }
+  },
+  "flavor": {
+    "sale_success": [
+      "霓虹嗡嗡作响，信用点进账的声音最好听。",
+      "常客开始记住你的摊位了。",
+      "收摊时，货箱轻得能单手拎走。"
+    ],
+    "spoilage": [
+      "今晚的教训写在垃圾桶里。",
+      "坏掉的不只是货，还有利润。",
+      "冷链也有极限 — 下次少进一点。"
+    ],
+    "stockout": [
+      "货架见底的速度远超预期。",
+      "排队的顾客最后空手而归。",
+      "需求像潮水 — 你低估了水位。"
+    ],
+    "upgrade": [
+      "新设备让摊位看起来更专业了。",
+      "花出去的钱，正在变成效率。"
+    ],
+    "contract": [
+      "契约章落，尾款入袋 — 白纸黑字最踏实。",
+      "交割完点数无误，看板上你的信用又亮了一格。"
+    ],
+    "contract_breach": [
+      "撕约的声音整条码头都听得见。",
+      "违约金划走的那一刻，你听见自己的声望在掉渣。"
+    ],
+    "smuggle": [
+      "夹层里的货安安静静，只有你知道它们多烫。",
+      "船底的手电筒晃了两下 — 交易两清，各自消失。"
+    ],
+    "seized": [
+      "缉私队走后，夹层空了，罚单还热着。",
+      "热度就是罚单的面额 — 今晚你付了全价。"
+    ],
+    "liquidated": [
+      "封条贴上的时候，霓虹招牌还亮着最后一格。",
+      "清算员的账，比你算得快，也比你算得冷。"
+    ],
+    "game_over": [
+      "十八夜过去，你的霓虹招牌还亮着。",
+      "码头记住了这个会做生意的摊位。",
+      "霓虹还在，故事写完了。"
+    ]
+  },
+  "tips": [
+    "契约交付优先于散客 — 接了单先把货备齐。",
+    "定金是甜的，违约金是苦的 — 跨夜大单量力而接。",
+    "走私压成本，热度记仇 — 查验概率就写在计划面板上。",
+    "热度每夜按比例消退，低热小批走私最划算。",
+    "风声两候选押概率，情报天线让数字说真话。",
+    "昨夜抬价，今夜客稀 — 回头客记得你的标价。",
+    "临期货卖不掉，黄昏卖给老盖也比报损强。",
+    "人情点只有三格：免租、免罚、急补货，用在刀刃上。",
+    "现金见红每夜滚两成利 — 别硬扛，半两的钱庄开着。",
+    "考核夜看净值：现金加库存半价折算，减未还本金。",
+    "夜十六起进价收口，夜十八批发市场关门 — 终夜的货提前囤。",
+    "终夜主题从夜十二开始漏风 — 押对主题，需求翻倍再翻倍。"
+  ],
+  "ranks": {
+    "STARPORT LEGEND": "星港传奇",
+    "ORBIT BARON": "轨道大亨",
+    "DOCK MERCHANT": "码头老板",
+    "NIGHT HAWKER": "夜鹰",
+    "DRIFTWOOD": "浮木",
+    "SPACE DEBRIS": "太空垃圾"
+  }
+}

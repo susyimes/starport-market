@@ -9,3 +9,23 @@ build/
 *.egg-info/
 /screenshots/
 .kimi-k3/
+
+# Local agent and engine configuration
+.grok/
+tools/bin/
+godot/.env.godot
+
+# Godot generated state and local rollback snapshots
+godot/.godot/
+godot/.preview/
+godot/.backup-v2/
+godot/tools/__pycache__/
+asset-backup-*/
+
+# Unity generated state (keep project source visible for separate publication)
+unity/Library/
+unity/Logs/
+unity/Temp/
+unity/obj/
+unity/UserSettings/
+unity/Assets/_Recovery/

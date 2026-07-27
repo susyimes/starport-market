@@ -1,0 +1,887 @@
+{
+  "game": {
+    "total_days": 18,
+    "start_cash": 120,
+    "start_reputation": 50,
+    "base_capacity": 26,
+    "waste_fee": 1,
+    "group_pref_bonus": 0.18,
+    "demand_noise": 0.12,
+    "price_elasticity_pow": 0.55
+  },
+  "products": [
+    {
+      "id": "neon_skewer",
+      "name": "Neon Skewer",
+      "short_name": "SKEWER",
+      "description": "Glow-grilled protein cubes. Dockside classic, spoils fast.",
+      "base_cost": 9,
+      "base_price": 11,
+      "base_demand": 6,
+      "shelf_life": 2,
+      "tags": [
+        "food",
+        "glow",
+        "protein"
+      ]
+    },
+    {
+      "id": "star_donut",
+      "name": "Star Donut",
+      "short_name": "DONUT",
+      "description": "Meteor-sugar icing. Sweet crowd-pleaser.",
+      "base_cost": 6,
+      "base_price": 8,
+      "base_demand": 7,
+      "shelf_life": 3,
+      "tags": [
+        "food",
+        "sweet",
+        "glow"
+      ]
+    },
+    {
+      "id": "ion_soda",
+      "name": "Ion Soda",
+      "short_name": "SODA",
+      "description": "Crackling fizz. Cheap and endlessly thirsty work.",
+      "base_cost": 5,
+      "base_price": 6,
+      "base_demand": 8,
+      "shelf_life": 5,
+      "tags": [
+        "drink",
+        "cheap",
+        "fizzy"
+      ]
+    },
+    {
+      "id": "void_jelly",
+      "name": "Void Jelly",
+      "short_name": "JELLY",
+      "description": "A star suspended in wobble. Exotic and fragile.",
+      "base_cost": 13,
+      "base_price": 16,
+      "base_demand": 4,
+      "shelf_life": 4,
+      "tags": [
+        "food",
+        "exotic",
+        "bio"
+      ]
+    },
+    {
+      "id": "meteor_popcorn",
+      "name": "Meteor Popcorn",
+      "short_name": "POPCORN",
+      "description": "Popped in re-entry heat. Dry, keeps forever.",
+      "base_cost": 5,
+      "base_price": 7,
+      "base_demand": 6,
+      "shelf_life": null,
+      "tags": [
+        "food",
+        "cheap",
+        "travel"
+      ]
+    },
+    {
+      "id": "holo_sticker",
+      "name": "Holo Sticker",
+      "short_name": "STICKER",
+      "description": "Pocket-sized hologram. Pilots plaster them everywhere.",
+      "base_cost": 8,
+      "base_price": 10,
+      "base_demand": 4,
+      "shelf_life": null,
+      "tags": [
+        "tech",
+        "gift",
+        "cheap"
+      ]
+    },
+    {
+      "id": "orbit_plush",
+      "name": "Orbit Plush",
+      "short_name": "PLUSH",
+      "description": "Saturn-ring cuddle alien. High margin, niche buyers.",
+      "base_cost": 19,
+      "base_price": 24,
+      "base_demand": 3,
+      "shelf_life": null,
+      "tags": [
+        "gift",
+        "luxury",
+        "cute"
+      ]
+    },
+    {
+      "id": "quantum_coffee",
+      "name": "Quantum Coffee",
+      "short_name": "COFFEE",
+      "description": "Brewed in two timelines at once. Calm, premium fuel.",
+      "base_cost": 11,
+      "base_price": 14,
+      "base_demand": 5,
+      "shelf_life": 6,
+      "tags": [
+        "drink",
+        "calm",
+        "premium"
+      ]
+    }
+  ],
+  "customer_groups": [
+    {
+      "id": "dock_workers",
+      "name": "Dock Workers",
+      "leader": "Ironsand",
+      "description": "Hungry haulers on shift break; count every credit.",
+      "preferred_tags": [
+        "food",
+        "protein",
+        "glow"
+      ],
+      "price_sensitivity": 1.6
+    },
+    {
+      "id": "transit_pilots",
+      "name": "Transit Pilots",
+      "leader": "Migrant",
+      "description": "Layover crews grabbing rations for long hauls.",
+      "preferred_tags": [
+        "travel",
+        "drink",
+        "fizzy"
+      ],
+      "price_sensitivity": 1.2
+    },
+    {
+      "id": "star_tourists",
+      "name": "Star Tourists",
+      "leader": "Xiaoman",
+      "description": "Wide-eyed visitors hunting souvenirs and snacks.",
+      "preferred_tags": [
+        "gift",
+        "glow",
+        "cute"
+      ],
+      "price_sensitivity": 0.7
+    },
+    {
+      "id": "night_monks",
+      "name": "Night Monks",
+      "leader": "Lampless",
+      "description": "Quiet order keeping the docks ritually supplied.",
+      "preferred_tags": [
+        "calm",
+        "drink",
+        "bio"
+      ],
+      "price_sensitivity": 1.0
+    },
+    {
+      "id": "scrap_traders",
+      "name": "Scrap Traders",
+      "leader": "Turtledove",
+      "description": "Haggling brokers flipping salvaged station tech.",
+      "preferred_tags": [
+        "tech",
+        "cheap",
+        "travel"
+      ],
+      "price_sensitivity": 1.4
+    },
+    {
+      "id": "luxe_envoys",
+      "name": "Luxe Envoys",
+      "leader": "Ninth Princess",
+      "description": "Velvet-gloved delegations who never ask the price.",
+      "preferred_tags": [
+        "luxury",
+        "premium",
+        "exotic"
+      ],
+      "price_sensitivity": 0.5
+    }
+  ],
+  "events": [
+    {
+      "id": "grand_departure",
+      "name": "Grand Departure",
+      "headline": "The season's last convoy fuels up — everyone buys everything",
+      "description": "Departure crowds strip the market bare.",
+      "weight": 1,
+      "phase_weights": [
+        0,
+        0,
+        0
+      ],
+      "rumor_tag": "departure",
+      "inspect_mult": 1.0,
+      "effects": {}
+    },
+    {
+      "id": "comet_tail_festival",
+      "name": "Comet Tail Festival",
+      "headline": "Comet tail lights the sky; glow snacks fly off the shelf",
+      "description": "Crowds come for the view and glowing treats.",
+      "weight": 3,
+      "phase_weights": [
+        3,
+        3,
+        2
+      ],
+      "rumor_tag": "glow",
+      "inspect_mult": 0.6,
+      "effects": {
+        "demand_tags": {
+          "glow": 1.8
+        }
+      }
+    },
+    {
+      "id": "engine_maintenance",
+      "name": "Engine Maintenance",
+      "headline": "Fleets grounded overnight — travel rations surge",
+      "description": "Crews stock up on long-haul supplies.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        2
+      ],
+      "rumor_tag": "travel",
+      "inspect_mult": 1.0,
+      "effects": {
+        "demand_tags": {
+          "travel": 1.5
+        },
+        "cost_tags": {
+          "tech": 0.8
+        }
+      }
+    },
+    {
+      "id": "pilgrim_convoy",
+      "name": "Pilgrim Convoy",
+      "headline": "Night monks dock at dawn; calm goods in demand",
+      "description": "A quiet fleet seeking ritual supplies.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        1
+      ],
+      "rumor_tag": "calm",
+      "inspect_mult": 1.0,
+      "effects": {
+        "demand_all": 1.1,
+        "demand_tags": {
+          "calm": 1.6
+        }
+      }
+    },
+    {
+      "id": "scrap_auction",
+      "name": "Scrap Auction",
+      "headline": "Salvage auction floods the dock with cheap tech",
+      "description": "Tech is cheap to source tonight.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        1
+      ],
+      "rumor_tag": "tech",
+      "inspect_mult": 1.0,
+      "effects": {
+        "cost_tags": {
+          "tech": 0.7
+        },
+        "demand_tags": {
+          "tech": 1.3
+        }
+      }
+    },
+    {
+      "id": "gala_night",
+      "name": "Gala Night",
+      "headline": "Envoy ball on the upper deck — luxury sells",
+      "description": "Velvet gloves, open wallets.",
+      "weight": 2,
+      "phase_weights": [
+        1,
+        2,
+        3
+      ],
+      "rumor_tag": "luxury",
+      "inspect_mult": 0.6,
+      "effects": {
+        "demand_all": 0.9,
+        "demand_tags": {
+          "luxury": 1.7,
+          "premium": 1.7
+        }
+      }
+    },
+    {
+      "id": "reactor_leak",
+      "name": "Reactor Leak",
+      "headline": "Level 4 cordoned; thin crowds, pricey food",
+      "description": "A tense, quiet night with limited stall space.",
+      "weight": 1,
+      "phase_weights": [
+        1,
+        1,
+        2
+      ],
+      "rumor_tag": "official",
+      "inspect_mult": 1.0,
+      "effects": {
+        "demand_all": 0.75,
+        "capacity_delta": -4,
+        "cost_tags": {
+          "food": 1.3
+        }
+      }
+    },
+    {
+      "id": "sweet_comet",
+      "name": "Sweet Comet",
+      "headline": "Sugar-dust tail brushes the station — sweet tooths unite",
+      "description": "Desserts move twice as fast.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        2
+      ],
+      "rumor_tag": "sweet",
+      "inspect_mult": 0.6,
+      "effects": {
+        "demand_tags": {
+          "sweet": 1.9
+        }
+      }
+    },
+    {
+      "id": "dock_strike",
+      "name": "Dock Strike",
+      "headline": "Cargo handlers walk out; supply lines squeeze",
+      "description": "Everything costs more, fewer shoppers roam.",
+      "weight": 1,
+      "phase_weights": [
+        1,
+        1,
+        2
+      ],
+      "rumor_tag": "official",
+      "inspect_mult": 1.0,
+      "effects": {
+        "demand_all": 0.8,
+        "cost_all": 1.2
+      }
+    },
+    {
+      "id": "zero_g_carnival",
+      "name": "Zero-G Carnival",
+      "headline": "Gravity off in bay 3 — fizzy and cute go wild",
+      "description": "Carnival crowds want fun, not dinner.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        1
+      ],
+      "rumor_tag": "fizzy",
+      "inspect_mult": 0.6,
+      "effects": {
+        "demand_tags": {
+          "fizzy": 1.6,
+          "cute": 1.6
+        }
+      }
+    },
+    {
+      "id": "customs_inspection",
+      "name": "Customs Sweep",
+      "headline": "Inspectors everywhere — imports sting",
+      "description": "Tech and luxury sourcing gets expensive; patrols doubled.",
+      "weight": 1,
+      "phase_weights": [
+        1,
+        3,
+        5
+      ],
+      "rumor_tag": "official",
+      "inspect_mult": 2.0,
+      "effects": {
+        "demand_all": 0.85,
+        "cost_tags": {
+          "tech": 1.4,
+          "luxury": 1.4
+        }
+      }
+    },
+    {
+      "id": "meteor_shower",
+      "name": "Meteor Shower",
+      "headline": "Sky puts on a show — full promenade tonight",
+      "description": "Everyone is out; everything sells.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        2,
+        2
+      ],
+      "rumor_tag": "crowd",
+      "inspect_mult": 0.6,
+      "effects": {
+        "demand_all": 1.25,
+        "demand_tags": {
+          "food": 1.2
+        }
+      }
+    },
+    {
+      "id": "quiet_orbit",
+      "name": "Quiet Orbit",
+      "headline": "Silent hours; only the tea houses hum",
+      "description": "A slow night that favors calm goods.",
+      "weight": 2,
+      "phase_weights": [
+        2,
+        1,
+        1
+      ],
+      "rumor_tag": "calm",
+      "inspect_mult": 1.0,
+      "effects": {
+        "demand_all": 0.9,
+        "demand_tags": {
+          "calm": 1.4
+        },
+        "reputation_delta": 2
+      }
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "cold_rack",
+      "name": "Cold Rack",
+      "description": "Adds 8 chilled cargo slots per level.",
+      "base_cost": 40,
+      "cost_growth": 1.6,
+      "max_level": 2,
+      "effects": {
+        "capacity_delta": 8
+      }
+    },
+    {
+      "id": "intel_antenna",
+      "name": "Intel Antenna",
+      "description": "Lv1: tomorrow's rumor odds are exact. Lv2: night-after also shows both candidates.",
+      "base_cost": 55,
+      "cost_growth": 1.8,
+      "max_level": 2,
+      "effects": {
+        "intel_level": 1
+      }
+    },
+    {
+      "id": "freshness_seal",
+      "name": "Freshness Seal",
+      "description": "Vacuum wrap: everything perishable lasts 1 night longer.",
+      "base_cost": 70,
+      "cost_growth": 2.0,
+      "max_level": 1,
+      "effects": {
+        "shelf_life_bonus": 1
+      }
+    },
+    {
+      "id": "bargain_terminal",
+      "name": "Bargain Terminal",
+      "description": "Contract prices +8% per level.",
+      "base_cost": 50,
+      "cost_growth": 1.7,
+      "max_level": 2,
+      "effects": {
+        "contract_bonus": 0.04
+      }
+    }
+  ],
+  "rent_curve": {
+    "acts": [
+      {
+        "from": 1,
+        "to": 6,
+        "rent": 12
+      },
+      {
+        "from": 7,
+        "to": 12,
+        "rent": 22
+      },
+      {
+        "from": 13,
+        "to": 17,
+        "rent": 34
+      }
+    ],
+    "fail_bump": 6
+  },
+  "checkpoints": [
+    {
+      "id": "cp1",
+      "day": 6,
+      "net_target": 260,
+      "subsidy": 30,
+      "rep_reward": 3,
+      "favor_reward": 1
+    },
+    {
+      "id": "cp2",
+      "day": 12,
+      "net_target": 480,
+      "heat_max": 70,
+      "subsidy": 0,
+      "rep_reward": 0,
+      "favor_reward": 1,
+      "capacity_reward": 2,
+      "stall_fee_mult_pass": 0.5,
+      "stall_fee_mult_fail": 1.5
+    }
+  ],
+  "heat": {
+    "per_unit": 2,
+    "max": 100,
+    "decay_rate": 0.3,
+    "decay_min": 4,
+    "floor_base": 6,
+    "floor_per_units": 6,
+    "prob_cap": 80,
+    "fine_per_heat": 2,
+    "seize_rep_penalty": 6,
+    "price_min": 0.35,
+    "price_max": 0.46,
+    "offer_count_min": 1,
+    "offer_count_max": 2,
+    "offer_qty_min": 4,
+    "offer_qty_max": 6
+  },
+  "contracts": {
+    "board_size": 2,
+    "spot": {
+      "qty_base": 3,
+      "qty_per_day": 0.28,
+      "qty_variance": 3,
+      "qty_min": 2,
+      "price_mult": 1.18,
+      "penalty_rate": 0.3,
+      "rep_penalty": 4,
+      "rep_reward": 2
+    },
+    "bulk": {
+      "min_day": 5,
+      "max_day": 16,
+      "rep_min": 55,
+      "qty_min": 15,
+      "qty_max": 20,
+      "price_mult": 1.8,
+      "deposit_rate": 0.3,
+      "due_min": 2,
+      "due_max": 3,
+      "penalty_deposit_mult": 1.5,
+      "rep_penalty": 8,
+      "rep_reward": 5,
+      "favor_reward": 1,
+      "board_chance": 0.45
+    },
+    "ultimate": {
+      "day": 15,
+      "due_day": 18,
+      "qty_min": 18,
+      "qty_max": 22,
+      "price_mult": 2.6,
+      "deposit_rate": 0.35,
+      "penalty_deposit_mult": 2.0,
+      "rep_penalty": 12,
+      "rep_reward": 0,
+      "score_bonus": 150
+    }
+  },
+  "visitors": {
+    "sweeper": {
+      "min_expiring": 4,
+      "price_rate": 0.55
+    },
+    "informant": {
+      "heat_min": 40,
+      "base_cost": 12,
+      "cost_per_heat": 0.5,
+      "heat_relief": 25
+    },
+    "broker": {
+      "cost": 28,
+      "prob_gap_max": 30
+    },
+    "vip": {
+      "rep_min": 65,
+      "stock_min": 2,
+      "buy_limit": 2,
+      "price_mult": 1.5,
+      "promise_qty": 3,
+      "promise_rep_penalty": 3,
+      "promise_favor_reward": 1,
+      "tags": [
+        "luxury",
+        "premium"
+      ]
+    },
+    "cameo_chance": 0.25,
+    "cameo_tip_min": 2,
+    "cameo_tip_max": 6
+  },
+  "routes": {
+    "n1": [
+      {
+        "id": "official_license",
+        "name": "Official License",
+        "description": "Official sourcing -8%; passing a checkpoint pays +$20 extra.",
+        "effects": {
+          "order_discount": 0.08,
+          "checkpoint_bonus": 20
+        }
+      },
+      {
+        "id": "gray_route",
+        "name": "Gray Route",
+        "description": "Smuggle bay carries +1 product line; smuggle prices -5% more.",
+        "effects": {
+          "smuggle_slots": 1,
+          "smuggle_discount": 0.1
+        }
+      }
+    ],
+    "n7": [
+      {
+        "id": "cold_pact",
+        "name": "Cold Chain Pact",
+        "description": "Shelf life +1; waste fees halved.",
+        "effects": {
+          "shelf_life_bonus": 1,
+          "waste_fee_mult": 0.5
+        }
+      },
+      {
+        "id": "dock_broker",
+        "name": "Dock Broker",
+        "description": "Contract prices +10%; one extra contract card each night.",
+        "effects": {
+          "contract_price_mult": 1.05,
+          "contract_extra_card": 1
+        }
+      }
+    ],
+    "n13": [
+      {
+        "id": "vip_list",
+        "name": "VIP Ledger",
+        "description": "Luxury and premium demand +25%.",
+        "effects": {
+          "tag_demand": {
+            "luxury": 1.25,
+            "premium": 1.25
+          }
+        }
+      },
+      {
+        "id": "customs_insider",
+        "name": "Customs Insider",
+        "description": "Heat capped at 50; inspection odds -40%.",
+        "effects": {
+          "heat_cap": 50,
+          "inspect_prob_mult": 0.5
+        }
+      }
+    ]
+  },
+  "price_memory": {
+    "high_ratio": 1.5,
+    "high_mult": 0.85,
+    "low_ratio": 0.95,
+    "low_mult": 1.06
+  },
+  "favor": {
+    "max": 3,
+    "restock_qty": 5
+  },
+  "loans": {
+    "amount": 150,
+    "payment": 25,
+    "nights": 8,
+    "max_loans": 2,
+    "unlock_below": 30,
+    "negative_interest": 0.2,
+    "bankrupt_streak": 3
+  },
+  "market_wave": {
+    "min": 0.85,
+    "max": 1.2,
+    "trend_window": 5
+  },
+  "reputation": {
+    "demand_per_point": 0.006
+  },
+  "finale": {
+    "event_id": "grand_departure",
+    "demand_all": 2.2,
+    "theme_mult": 2.5,
+    "capacity_bonus": 8,
+    "stall_fee": 50,
+    "reveal_domain_day": 12,
+    "reveal_tag_day": 15,
+    "confirm_day": 17,
+    "close_day": 18,
+    "supply_squeeze": {
+      "16": 1.15,
+      "17": 1.35
+    },
+    "themes": [
+      {
+        "tag": "luxury",
+        "decoy": "premium"
+      },
+      {
+        "tag": "cute",
+        "decoy": "gift"
+      },
+      {
+        "tag": "fizzy",
+        "decoy": "cheap"
+      },
+      {
+        "tag": "gift",
+        "decoy": "cute"
+      },
+      {
+        "tag": "travel",
+        "decoy": "cheap"
+      }
+    ]
+  },
+  "score": {
+    "inventory_rate": 0.5,
+    "debt_mult": 1.5,
+    "rep_mult": 5,
+    "fulfill_mult": 10,
+    "breach_mult": 20,
+    "ranks": [
+      {
+        "min": 2600,
+        "id": "STARPORT LEGEND"
+      },
+      {
+        "min": 1900,
+        "id": "ORBIT BARON"
+      },
+      {
+        "min": 1300,
+        "id": "DOCK MERCHANT"
+      },
+      {
+        "min": 800,
+        "id": "NIGHT HAWKER"
+      },
+      {
+        "min": 400,
+        "id": "DRIFTWOOD"
+      },
+      {
+        "min": -99999999,
+        "id": "SPACE DEBRIS"
+      }
+    ]
+  },
+  "achievements": [
+    {
+      "id": "first_contract",
+      "name": "First Contract",
+      "description": "Fulfill a contract.",
+      "metric": "contracts_fulfilled",
+      "target": 1
+    },
+    {
+      "id": "contract_pro",
+      "name": "Contract Pro",
+      "description": "Fulfill 6 contracts in a season.",
+      "metric": "contracts_fulfilled",
+      "target": 6
+    },
+    {
+      "id": "hundred_sold",
+      "name": "Hundred Club",
+      "description": "Sell 100 units in a season.",
+      "metric": "total_units_sold",
+      "target": 100
+    },
+    {
+      "id": "two_k_revenue",
+      "name": "Two-K Till",
+      "description": "Reach 2000 total revenue.",
+      "metric": "total_revenue",
+      "target": 2000
+    },
+    {
+      "id": "cash_300",
+      "name": "Deep Pockets",
+      "description": "Hold 300 credits at once.",
+      "metric": "cash",
+      "target": 300
+    },
+    {
+      "id": "rep_80",
+      "name": "Beloved Stall",
+      "description": "Reach 80 reputation.",
+      "metric": "reputation",
+      "target": 80
+    },
+    {
+      "id": "tinkerer",
+      "name": "Tinkerer",
+      "description": "Own 4 total upgrade levels.",
+      "metric": "upgrade_levels",
+      "target": 4
+    },
+    {
+      "id": "perfect_5",
+      "name": "Flawless Five",
+      "description": "Five nights at 98%+ fulfillment.",
+      "metric": "perfect_service_days",
+      "target": 5
+    },
+    {
+      "id": "no_waste_10",
+      "name": "Clean Plate",
+      "description": "Ten nights with zero spoilage.",
+      "metric": "no_waste_days",
+      "target": 10
+    },
+    {
+      "id": "night_runner",
+      "name": "Night Runner",
+      "description": "Move 40 smuggled units in a season.",
+      "metric": "smuggled_units",
+      "target": 40
+    },
+    {
+      "id": "zero_waste_run",
+      "name": "Zero Waste Run",
+      "description": "Finish a season with zero spoiled units.",
+      "metric": "total_units_spoiled",
+      "target": 0
+    }
+  ]
+}
